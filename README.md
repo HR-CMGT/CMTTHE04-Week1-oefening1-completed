@@ -1,7 +1,6 @@
 # PRG04 Week1 oefening 1 - completed
 
-In deze opdracht herhalen we een aantal javascript basics: loops en objecten.
-We zetten de eerste stap in objectgeörienteerd denken.
+Werken met loops, semantische elementen
 
 ### OPDRACHT
 
