@@ -1,12 +1,23 @@
-# PRG04 Week1 oefening 2 completed
+# PRG04 Week1 oefening 1 - completed
 
-## Pixel Aquarium
+In deze opdracht herhalen we een aantal javascript basics: loops en objecten.
+We zetten de eerste stap in objectgeörienteerd denken.
 
 ### OPDRACHT
+
+Lees het **HTML en CSS voor Games** gedeelte uit de Quickstart
+
 - Verwijder de fish en bubble uit de html file
-- Voeg via javascript een vis en een bubble toe
-- `document.createelement(tagname)`
-- `document.body.appendchild(element)`
+- Voeg via javascript een vis en een bubble toe. Gebruik hierbij:
+```
+document.createElement(...)
+document.body.appendChild(...)
+```
+
+### OPDRACHT
+
+Gebruik de bestaande code in de js en css file:
+
 - Zet de vis op een willekeurige plek in het scherm met een willekeurige kleur
 - Zet de bubble op een willekeurige x positie
 
@@ -14,14 +25,18 @@
 - Maak een for loop die 100 visjes en bubbles toevoegt. deze moeten allemaal anders zijn!
 
 ### OPDRACHT
-- Gebruik nu settimout of setinterval om nieuwe visjes en bubbles te plaatsen
+Lees de [documentatie van setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)
+- Gebruik nu setTimeout om nieuwe visjes en bubbles te plaatsen. 
+- Lukt het je om te stoppen als er 100 visjes zijn?
+
+```
+setTimeout(functie, tijd)
+```
 
 ### OPDRACHT
-- Plaats een titel en start knop. als je op start klikt verdwijnen de titel en knop, en 
-- Daarna worden pas de visjes getekend
-
-### OPDRACHT
-- Voeg een click event listener toe aan elk visje. als geklikt wordt
-- Geef je de geklikte vis een nieuwe class die een andere achtergrond heeft 
-- `element.addEventListener("click", function(){});`
-- `element.classList.add(".deadfish");`
+- Voeg een click event listener toe aan elk visje. 
+- Als geklikt wordt geef je de geklikte vis een nieuwe class die een andere achtergrond heeft 
+```
+element.addEventListener("click", clickHandler)
+element.classList.add("deadfish")
+```
