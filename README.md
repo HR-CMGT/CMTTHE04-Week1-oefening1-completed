@@ -1,4 +1,4 @@
-# PRG04 Week1 oefening 1
+# CMTTHE04 Week1 oefening 1
 
 Werken met loops, semantische elementen
 
