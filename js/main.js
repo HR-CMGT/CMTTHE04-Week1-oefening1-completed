@@ -1,10 +1,8 @@
-numberOfFish = 0
-
 function createFishAndBubble(){
-    setTimeout(function(){ 
+    for(let i = 0;i<100;i++){
         createFish()
         createBubble()
-    }, 250)
+    }
 }
 
 function createFish(){
@@ -13,35 +11,28 @@ function createFish(){
     let startx = (Math.random() * window.innerWidth)
     let starty = (Math.random() * window.innerHeight)
     let color = Math.random() * 360
-    fish.style.left = startx + "px"
-    fish.style.top = starty + "px"
-    fish.style.webkitFilter = "hue-rotate(" + color + "deg)"
-    fish.style.filter = "hue-rotate(" + color + "deg)"
-
+    fish.style.transform = `translate(${startx}px, ${starty}px)`
+    fish.style.filter = `hue-rotate(${color}deg)`
     fish.addEventListener("click", killFish)
-
-    numberOfFish++
-    if(numberOfFish < 100) {
-        createFishAndBubble()
-    }
 }
 
 function createBubble(){
     let bubble = document.createElement("bubble")
     document.body.appendChild(bubble)
     let startx = (Math.random() * window.innerWidth)
-    bubble.style.left = startx + "px"
-    bubble.style.top = "0px"
+    let starty = (Math.random() * window.innerHeight)
+    bubble.style.transform = `translate(${startx}px, ${starty}px)`
+    bubble.addEventListener("click", popBubble)
 }
 
-
 function killFish(e){
-    let fish = e.currentTarget
+    let fish = e.target
     fish.classList.add("dead")
 }
 
+function popBubble(e) {
+    let bubble = e.target
+    bubble.remove()
+}
 
-
-window.addEventListener("load", function () {
-    createFishAndBubble()
-})
+createFishAndBubble()
