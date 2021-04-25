@@ -1,3 +1,5 @@
+const plopSound = new Audio('./sound/plop.mp3')
+
 function createFishAndBubble(){
     for(let i = 0;i<100;i++){
         createFish()
@@ -33,6 +35,7 @@ function killFish(e){
 function popBubble(e) {
     let bubble = e.target
     bubble.remove()
+    plopSound.play()
 }
 
 createFishAndBubble()
